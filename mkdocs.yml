@@ -1,0 +1,54 @@
+site_name: Scholar Compass 高校文档
+site_description: 帮助高三毕业生更好地择校选专业。
+site_url: https://scholar-compass.github.io/content/
+repo_url: https://github.com/Scholar-Compass/content
+repo_name: Scholar-Compass/content
+edit_uri: "blob/main/docs/"
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      primary: blue
+      toggle:
+        icon: material/brightness-auto
+        name: 切换到亮色
+    - media: "(prefers-color-scheme: light)"
+      primary: blue
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗色
+    - media: "(prefers-color-scheme: dark)"
+      primary: blue
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 自动设置亮暗
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.prune
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    # - navigation.sections
+    - content.action.view
+    - content.action.edit
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        case: lower
+
+plugins:
+  - search
+  - section-index
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - gen-files:
+      scripts:
+        - generate_files.py
