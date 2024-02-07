@@ -38,11 +38,15 @@ theme:
   custom_dir: overrides
 
 markdown_extensions:
+  - attr_list
   - admonition
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         case: lower
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search
@@ -52,6 +56,8 @@ plugins:
   - gen-files:
       scripts:
         - hooks/generate_files.py
+  - macros:
+      module_name: hooks/macros
   - git-revision-date-localized:
       enabled: !ENV [MKDOCS_ENABLE_GIT_INTEGRATION, false]
       enable_creation_date: true
