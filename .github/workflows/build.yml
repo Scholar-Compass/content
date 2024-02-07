@@ -40,7 +40,7 @@ jobs:
         with:
           tool: just
       - run: just bootstrap
-      - run: just build
+      - run: MKDOCS_ENABLE_GIT_INTEGRATION=true just build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/

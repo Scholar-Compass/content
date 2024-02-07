@@ -54,6 +54,7 @@ plugins:
       scripts:
         - generate_files.py
   - git-revision-date-localized:
+      enabled: !ENV [MKDOCS_ENABLE_GIT_INTEGRATION, false]
       enable_creation_date: true
       locale: zh
       exclude:
@@ -62,6 +63,7 @@ plugins:
         - university/index.md
         - major/index.md
   - git-authors:
+      enabled: !ENV [MKDOCS_ENABLE_GIT_INTEGRATION, false]
       count_empty_lines: true
       exclude:
         - index.md
