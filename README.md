@@ -1,5 +1,8 @@
 # Scholar Compass 高校文档
 
+[![build](https://github.com/Scholar-Compass/content/actions/workflows/build.yml/badge.svg)](https://github.com/Scholar-Compass/content/actions/workflows/build.yml)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Scholar-Compass/content/main.svg)](https://results.pre-commit.ci/latest/github/Scholar-Compass/content/main)
+
 帮助高三毕业生更好地择校选专业。
 
 ## 🤝改进此项目
