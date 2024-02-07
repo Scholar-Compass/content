@@ -69,3 +69,6 @@ plugins:
         - SUMMARY.md
         - university/index.md
         - major/index.md
+
+hooks:
+  - hooks/add_authors.py
