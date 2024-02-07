@@ -32,7 +32,6 @@ theme:
     - navigation.top
     - navigation.tabs
     - navigation.footer
-    # - navigation.sections
     - content.action.view
     - content.action.edit
     - search.highlight
@@ -52,7 +51,7 @@ plugins:
       nav_file: SUMMARY.md
   - gen-files:
       scripts:
-        - generate_files.py
+        - hooks/generate_files.py
   - git-revision-date-localized:
       enabled: !ENV [MKDOCS_ENABLE_GIT_INTEGRATION, false]
       enable_creation_date: true
@@ -74,3 +73,6 @@ plugins:
 
 hooks:
   - hooks/add_authors.py
+
+watch:
+  - hooks

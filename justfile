@@ -14,7 +14,7 @@ bootstrap:
     {{ pip }} install $({{ mkdocs }} get-deps) --upgrade
 
 # Start the live-reloading docs server
-serve *ARGS="--watch generate_files.py":
+serve *ARGS:
     {{ mkdocs }} serve {{ ARGS }}
 
 # Build the docs site
