@@ -32,3 +32,28 @@ def define_env(env: MacrosPlugin):
 
     如果您有兴趣帮助完善，可以[:material-file-edit-outline:编辑此页]({env.page.edit_url})。
 """
+
+    @env.macro
+    def b23_tv(bvid: str) -> str:
+        """哔哩哔哩视频
+
+        # 示例
+
+        ```
+        {{ b23_tv("BV1ua4y1E7uf") }}
+        ```
+
+        # 参数
+
+        - `bvid`：BV号，以`BV`开头，例如`BV1ua4y1E7uf`。
+
+        # 相关链接
+
+        [模板:`BilibiliVideo` - 萌娘百科 万物皆可萌的百科全书](https://zh.moegirl.org.cn/Template:BilibiliVideo)
+        """
+        # 依赖`extra.css`
+        return f"""
+<aside class="b23-tv">
+    <iframe loading="lazy" src="https://player.bilibili.com/player.html?autoplay=0&as_wide=1&bvid={bvid}"></iframe>
+</aside>
+"""

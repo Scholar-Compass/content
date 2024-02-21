@@ -1,0 +1,12 @@
+/* Macro `b23_tv` */
+.md-typeset aside.b23-tv>iframe {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 20em;
+
+    border: none;
+
+    /* Same as `.admonition` */
+    border-radius: 0.2rem;
+}

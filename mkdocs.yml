@@ -82,3 +82,6 @@ hooks:
 
 watch:
   - hooks
+
+extra_css:
+  - asset/style/extra.css
