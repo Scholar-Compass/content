@@ -81,6 +81,7 @@ plugins:
 
 hooks:
   - hooks/add_authors.py
+  - hooks/external_link_in_new_tab.py
 
 watch:
   - hooks
