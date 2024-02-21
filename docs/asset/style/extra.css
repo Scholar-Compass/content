@@ -1,3 +1,32 @@
+.md-typeset strong {
+    color: var(--md-primary-fg-color);
+}
+
+.md-typeset em:lang(zh) {
+    font-style: normal;
+
+    /*
+        GB/T 15834—2011《标点符号用法》附录A.10：
+
+        > 不应使用文字下加直线或波浪线等形式表示着重。
+        > 文字下加直线为专名号形式（4.16）；文字下加浪文线是特殊书名号（A.13.6）。
+        > 着重号的形式统一为相应项目加小圆点。
+
+        然而小圆点太难辩识，而且影响行距，所以还是下加波浪线吧。
+    */
+    text-decoration: underline wavy var(--md-primary-fg-color);
+    text-underline-position: under;
+}
+
+.md-typeset figure>img {
+    width: 80%;
+}
+
+.md-typeset figcaption {
+    /* Revert mkdocs-material */
+    font-style: normal;
+}
+
 /* Macro `b23_tv` */
 .md-typeset aside.b23-tv>iframe {
     display: block;
