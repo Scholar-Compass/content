@@ -35,7 +35,9 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: justfile
+          cache-dependency-path: |
+            justfile
+            mkdocs.yml
       - uses: taiki-e/install-action@v2
         with:
           tool: just
