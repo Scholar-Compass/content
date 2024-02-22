@@ -27,6 +27,12 @@
     font-style: normal;
 }
 
+/* Macro `just_kidding` */
+.md-typeset s.just-kidding {
+    color: #666;
+    text-decoration-color: #000;
+}
+
 /* Macro `b23_tv` */
 .md-typeset aside.b23-tv>iframe {
     display: block;
