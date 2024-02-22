@@ -78,6 +78,7 @@ plugins:
         - SUMMARY.md
         - university/index.md
         - major/index.md
+  - glightbox
 
 hooks:
   - hooks/add_authors.py

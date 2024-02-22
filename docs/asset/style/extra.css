@@ -18,7 +18,8 @@
     text-underline-position: under;
 }
 
-.md-typeset figure>img {
+.md-typeset figure>img,
+.md-typeset figure>a.glightbox[data-type=image] {
     width: 80%;
 }
 
