@@ -40,6 +40,8 @@ theme:
 markdown_extensions:
   - attr_list
   - admonition
+  - md_in_html
+  - mdx_truly_sane_lists
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -76,9 +78,14 @@ plugins:
         - SUMMARY.md
         - university/index.md
         - major/index.md
+  - glightbox
 
 hooks:
   - hooks/add_authors.py
+  - hooks/external_link_in_new_tab.py
 
 watch:
   - hooks
+
+extra_css:
+  - asset/style/extra.css
