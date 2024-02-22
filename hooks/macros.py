@@ -54,7 +54,7 @@ def define_env(env: MacrosPlugin):
         # 依赖`extra.css`
         return f"""
 <aside class="b23-tv">
-    <iframe loading="lazy" src="https://player.bilibili.com/player.html?autoplay=0&as_wide=1&bvid={bvid}"></iframe>
+    <iframe loading="lazy" allowfullscreen src="https://player.bilibili.com/player.html?autoplay=0&as_wide=1&bvid={bvid}"></iframe>
 </aside>
 """
 
