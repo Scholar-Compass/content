@@ -14,7 +14,9 @@
 
         然而小圆点太难辩识，而且影响行距，所以还是下加波浪线吧。
     */
-    text-decoration: underline wavy var(--md-primary-fg-color);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--md-primary-fg-color);
     text-underline-position: under;
 }
 
