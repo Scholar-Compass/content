@@ -51,6 +51,8 @@ def main() -> None:
 
         print(f"- 专业\n{tab}- major/*.md", file=f)
 
+        print("- *.md", file=f)
+
     with mkdocs_gen_files.open("university/index.md", "w") as f:
         print("目前包含", end="", file=f)
         print(
