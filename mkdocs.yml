@@ -35,6 +35,7 @@ theme:
     - content.action.view
     - content.action.edit
     - search.highlight
+  font: false
   custom_dir: overrides
 
 markdown_extensions:
