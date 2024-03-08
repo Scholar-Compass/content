@@ -42,7 +42,11 @@ markdown_extensions:
   - attr_list
   - admonition
   - md_in_html
+  # sane_lists should be put after mdx_truly_sane_lists.
+  # Reason: sane_lists respects numbers in `<ol>` (ordered lists), which are ignored by default.
+  # However mdx_truly_sane_lists also touches `<ol>`, and we should let sane_lists make the final decision.
   - mdx_truly_sane_lists
+  - sane_lists
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
