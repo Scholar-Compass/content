@@ -6,6 +6,7 @@ Used by mkdocs-gen-files and other plugins.
 
 - `location`：所在地区，例如`北京`，默认`京外`。
 """
+
 from __future__ import annotations
 
 from pathlib import Path

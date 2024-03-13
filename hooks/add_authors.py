@@ -14,6 +14,7 @@ additional_authors:
     last_datetime: 2006-12-01 00:12:00 +0800
 ```
 """
+
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
