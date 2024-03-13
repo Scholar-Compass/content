@@ -3,6 +3,7 @@
 Modified from
 https://github.com/squidfunk/mkdocs-material/discussions/3660#discussioncomment-6725823
 """
+
 from urllib.parse import urlparse
 
 import markdown
