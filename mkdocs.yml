@@ -41,6 +41,7 @@ theme:
 markdown_extensions:
   - attr_list
   - admonition
+  - pymdownx.details
   - md_in_html
   # sane_lists should be put after mdx_truly_sane_lists.
   # Reason: sane_lists respects numbers in `<ol>` (ordered lists), which are ignored by default.
