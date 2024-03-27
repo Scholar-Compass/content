@@ -25,8 +25,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  compile-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: YDX-2147483647/Scholar-Compass-front
+          ref: free
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm build
+      - name: Rename to bot.js
+        run: |
+          cd out && mv $(jq '.["src/main.tsx"].file' .vite/manifest.json --raw-output) ../bot.js
+      - name: Upload bot.js
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot.js
+          path: bot.js
   build:
     runs-on: ubuntu-latest
+    needs: compile-bot
     steps:
       - uses: actions/checkout@v4
         with:
@@ -42,7 +67,12 @@ jobs:
         with:
           tool: just
       - run: just bootstrap
-      - run: MKDOCS_ENABLE_GIT_INTEGRATION=true just build
+      - name: Download bot.js
+        uses: actions/download-artifact@v4
+        with:
+          name: bot.js
+          path: docs/asset
+      - run: MKDOCS_ENABLE_GIT_INTEGRATION=true MKDOCS_BOT=production just build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/

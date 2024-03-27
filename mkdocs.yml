@@ -95,3 +95,11 @@ watch:
 
 extra_css:
   - asset/style/extra.css
+
+extra:
+  # Whether and where to load scripts
+  #
+  # - `development` ⇒ load from Vite dev server http://localhost:5173
+  # - `production` ⇒ load from the file `asset/bot.js`
+  # - Unset or anything else ⇒ disable
+  bot: !ENV [MKDOCS_BOT, "disable"]
