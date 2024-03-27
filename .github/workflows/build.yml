@@ -9,7 +9,6 @@ on:
       - main
     paths-ignore:
       - '.vscode/**'
-      - '.github/**'
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
