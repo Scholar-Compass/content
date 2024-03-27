@@ -41,7 +41,7 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install
-      - run: pnpm build
+      - run: VITE_PUBLIC_API_END_POINT=https://api.scholarcompass.org pnpm build
       - name: Rename to bot.js
         run: |
           cd out && mv $(jq '.["src/main.tsx"].file' .vite/manifest.json --raw-output) ../bot.js
