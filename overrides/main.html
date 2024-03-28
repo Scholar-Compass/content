@@ -19,6 +19,6 @@
     <script type="module" src="http://localhost:5173/@vite/client"></script>
     <script type="module" src="http://localhost:5173/src/main.tsx"></script>
   {% elif config.extra.bot == "production" %}
-    <script type="module" src="{{ config.site_url }}asset/bot.js"></script>
+    <script type="module" src="{{ 'asset/bot.js' | url }}"></script>
   {% endif %}
 {% endblock %}
