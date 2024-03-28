@@ -29,8 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: YDX-2147483647/Scholar-Compass-front
-          ref: free
+          repository: Scholar-Compass/Scholar-Compass-front
+          ref: embed
       - uses: pnpm/action-setup@v3
         with:
           version: 8
