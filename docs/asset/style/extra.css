@@ -20,6 +20,15 @@
     text-underline-position: under;
 }
 
+/* Relies on `hooks/external_link_in_new_tab.py` */
+.md-typeset a[target="_blank"]::after {
+    content: "🔗";
+
+    vertical-align: super;
+    font-size: x-small;
+    word-break: keep-all;
+}
+
 .md-typeset figure>img,
 .md-typeset figure>a.glightbox[data-type=image] {
     width: 80%;
