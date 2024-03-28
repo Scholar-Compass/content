@@ -52,9 +52,12 @@ def main() -> None:
 
         print(f"- 专业\n{tab}- major/*.md", file=f)
 
-        print("- *.md", file=f)
+        print("- [机器人](bot.md)", file=f)
+        print("- [关于](about.md)", file=f)
 
     with mkdocs_gen_files.open("university/index.md", "w") as f:
+        print("# :fontawesome-solid-school: 院校", end="\n\n", file=f)
+
         print("目前包含", end="", file=f)
         print(
             "、".join(f"{len(catalog[loc])}所[{loc}院校](#{loc})" for loc in locations),
@@ -70,6 +73,8 @@ def main() -> None:
                 print(f"- [{u.stem}]({path})", file=f)
 
     with mkdocs_gen_files.open("major/index.md", "w") as f:
+        print("# :material-school: 专业", end="\n\n", file=f)
+
         n = len(list((docs_dir / "major").glob("*.md")))
         print(f"目前包含{n}个专业文档信息。", file=f)
 

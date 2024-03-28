@@ -6,6 +6,12 @@ hide:
   - footer
 ---
 
-# 机器人
+# :material-robot: 机器人
+
+<style>
+  .md-typeset h1 {
+      margin-bottom: 0;
+  }
+</style>
 
 <div id="bot-root"></div>

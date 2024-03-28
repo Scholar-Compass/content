@@ -18,4 +18,19 @@ hide:
 
 如有相关问题或合作意向，可以通过微信公众号“37号花园”后台留言联系。
 
-配套使用 AI 对话机器人：[scholarcompass.org](https://scholarcompass.org/) （帮助匹配合适院校&快速获取文档信息）
+<style>
+  .md-typeset .md-button {
+      text-align: center;
+  }
+
+  .md-typeset .get-started {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+      gap: 0.5em;
+  }
+</style>
+
+<div markdown='span' class='get-started'>
+  [:fontawesome-solid-school: 访问院校列表](./university/index.md){ .md-button .md-button--primary }
+  [:material-robot: 与AI机器人对话](./bot.md){ .md-button }
+</div>
