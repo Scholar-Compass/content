@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # 关于
 
 ## :material-history: 历史
