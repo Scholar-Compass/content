@@ -97,6 +97,9 @@ extra_css:
   - asset/style/extra.css
 
 extra:
+  analytics:
+    provider: custom
+    property: a6bf04b80f6b97b6333ee4cf099290ea
   # Whether and where to load scripts
   #
   # - `development` ⇒ load from Vite dev server http://localhost:5173
