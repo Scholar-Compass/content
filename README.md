@@ -4,7 +4,8 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Scholar-Compass/content/main.svg)](https://results.pre-commit.ci/latest/github/Scholar-Compass/content/main)
 
 帮助高三毕业生更好地择校选专业。
-ps: 2023年项目链接 https://mp.weixin.qq.com/s/434bcZ4Jhuar610jqSgBWA 
+
+更多请参考[2023年项目链接](https://mp.weixin.qq.com/s/434bcZ4Jhuar610jqSgBWA)及[关于页面](https://scholar-compass.github.io/content/about/)。
 
 ## 🤝改进此项目
 
