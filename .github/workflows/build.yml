@@ -97,6 +97,8 @@ jobs:
       contents: read
       deployments: write
     steps:
+      - name: Checkout to help cloudflare/pages-action determine the branch
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: site
