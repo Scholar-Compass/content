@@ -91,23 +91,26 @@ jobs:
     name: Publish to Cloudflare Pages
     environment:
       name: cloudflare-pages
+      url: ${{ steps.deployment.outputs.url }}
     runs-on: ubuntu-latest
     needs: build
     permissions:
       contents: read
       deployments: write
     steps:
-      - name: Checkout to help cloudflare/pages-action determine the branch
+      - name: Checkout to help cloudflare/pages-action determine the commit
         uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: site
           path: site/
       - uses: cloudflare/pages-action@v1
+        id: deployment
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 7546e0e8b2da3fd06fff1373debbce8f
           projectName: scholar-compass
           directory: site/
+          branch: ${{ github.ref_name }}
           # To have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
