@@ -92,6 +92,7 @@ jobs:
     environment:
       name: cloudflare-pages
     runs-on: ubuntu-latest
+    needs: build
     permissions:
       contents: read
       deployments: write
@@ -99,6 +100,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: site
+          path: site/
       - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
