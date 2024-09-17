@@ -16,3 +16,6 @@ repos:
           - --extend-select
           - I
       - id: ruff-format
+
+ci:
+  autoupdate_schedule: quarterly
