@@ -36,9 +36,9 @@ def main() -> None:
     catalog = get_location_catalog(docs_dir)
     # 为了控制显示顺序，人为指定 locations
     locations = ["北京", "京外"]
-    assert (
-        len(locations) == len(catalog)
-    ), "人为规定的`locations`数量应当与实际相同。如果您给某个`university/*.md`加了新的`location`，应当更新`locations`。"
+    assert len(locations) == len(catalog), (
+        "人为规定的`locations`数量应当与实际相同。如果您给某个`university/*.md`加了新的`location`，应当更新`locations`。"
+    )
 
     with mkdocs_gen_files.open("SUMMARY.md", "w") as f:  # Used by mkdocs-literate-nav
         tab = " " * 4

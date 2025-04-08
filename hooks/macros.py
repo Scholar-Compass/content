@@ -13,7 +13,7 @@ def define_env(env: MacrosPlugin):
         return f"""
 !!! warning ":material-file-move-outline: 仍在迁移"
 
-    此文档尚未完成迁移，排版可能不正常。建议您暂时参阅[**:material-file-document-outline:原先的飞书版本**]({env.page.meta['feishu_url']})。
+    此文档尚未完成迁移，排版可能不正常。建议您暂时参阅[**:material-file-document-outline:原先的飞书版本**]({env.page.meta["feishu_url"]})。
 
     如果您有兴趣帮助迁移，可以[:material-file-edit-outline:编辑此页]({env.page.edit_url})。
     （记得到 [:octicons-issue-opened-24:议题#6](https://github.com/Scholar-Compass/content/issues/6) 说一声，以免和同学撞车。）
