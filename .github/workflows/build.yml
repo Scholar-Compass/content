@@ -65,7 +65,7 @@ jobs:
           name: bot.js
           path: docs/asset
       - run: MKDOCS_ENABLE_GIT_INTEGRATION=true MKDOCS_BOT=production just build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: site/
       - uses: actions/upload-artifact@v4
