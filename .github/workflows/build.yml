@@ -60,7 +60,7 @@ jobs:
           tool: just
       - run: just bootstrap
       - name: Download bot.js
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: bot.js
           path: docs/asset
@@ -101,7 +101,7 @@ jobs:
     steps:
       - name: Checkout to help cloudflare/pages-action determine the commit
         uses: actions/checkout@v5
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: site
           path: site/
