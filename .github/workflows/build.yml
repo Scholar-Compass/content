@@ -17,7 +17,7 @@ jobs:
   compile-bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           repository: Scholar-Compass/Scholar-Compass-front
           ref: embed
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: compile-bot
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0  # mkdocs-git-* plugins need all history
       - uses: actions/setup-python@v6
@@ -100,7 +100,7 @@ jobs:
       deployments: write
     steps:
       - name: Checkout to help cloudflare/pages-action determine the commit
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - uses: actions/download-artifact@v6
         with:
           name: site
