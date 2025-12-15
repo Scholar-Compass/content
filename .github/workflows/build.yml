@@ -35,7 +35,7 @@ jobs:
         run: |
           cd out && mv $(jq '.["src/main.tsx"].file' .vite/manifest.json --raw-output) ../bot.js
       - name: Upload bot.js
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: bot.js
           path: bot.js
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site/
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         with:
           name: site
           path: site/
