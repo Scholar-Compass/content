@@ -86,7 +86,7 @@ jobs:
       # To allow deployment to GitHub Pages
       id-token: write
     steps:
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
         id: deployment
   publish:
     name: Publish to Cloudflare Pages
