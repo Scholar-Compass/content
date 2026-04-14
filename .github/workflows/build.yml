@@ -23,10 +23,10 @@ jobs:
           ref: embed
       - uses: pnpm/action-setup@v6
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install
