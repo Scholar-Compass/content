@@ -20,7 +20,7 @@ jobs:
           cache-dependency-path: |
             justfile
             mkdocs.yml
-      - uses: taiki-e/install-action@v2
+      - uses: taiki-e/install-action@v2.85.5
         with:
           tool: just
       - run: just bootstrap
