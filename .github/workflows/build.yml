@@ -105,13 +105,15 @@ jobs:
         with:
           name: site
           path: site/
-      - uses: cloudflare/pages-action@v1
+      - uses: cloudflare/wrangler-action@v3
         id: deployment
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 7546e0e8b2da3fd06fff1373debbce8f
-          projectName: scholar-compass
-          directory: site/
-          branch: ${{ github.ref_name }}
+          command: >-
+            pages deploy
+            site/
+            --project-name=scholar-compass
+            --branch=${{ github.ref_name }}
           # To have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
