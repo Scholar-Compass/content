@@ -50,7 +50,7 @@ class ExternalLinksExtension(markdown.Extension):
     def extendMarkdown(self, md: markdown.Markdown):
         ignore_domains = self.getConfig("ignore_domains", [])
         if not isinstance(ignore_domains, list):
-            raise ValueError("'ignore_domains' config must be a list")
+            raise TypeError("'ignore_domains' config must be a list")
 
         md.treeprocessors.register(
             ExternalLinksTreeProcessor(md, ignore_domains), "external_links", -1000
